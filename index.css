@@ -60,7 +60,7 @@ h2.titles {
     color: #292929;
 }
 
-body {
+main {
     width: 1140px;
     margin: 0 auto;
     display: flex;
@@ -68,26 +68,26 @@ body {
 }
 
 @media (max-width: 480px) {
-    body {
+    main {
         font-size: 14px;
     }
 }
 
 @media (min-width: 481px) and (max-width: 768px) {
-    body {
+    main {
         font-size: 20px;
     }
 }
 
 @media (max-width: 768px) {
-    body {
+    main {
         width: 100%;
         flex-direction: column;
     }
 }
 
 @media (min-width: 769px) and (max-width: 1139px) {
-    body {
+    main {
         width: 100%;
     }
 }
@@ -351,4 +351,28 @@ h4 {
 .contacts-languages-second {
     border-top: 10px solid #9A9A9A;
     width: 40%;
+}
+
+footer {
+    max-width: 1140px;
+    height: 100px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: #79A9A5;
+    padding: 10px 0;
+}
+
+.github-logo {
+    height: 60px;
+    width: 60px;
+}
+
+.footer_element__gitlink {
+    display: block;
+}
+
+.footer_year {
+    padding: 30px;
 }
