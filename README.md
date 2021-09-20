@@ -1,1 +1,1 @@
-https://daria-baturina.github.io/rsschool-cv/cv
+https://daria-baturina.github.io/rsschool-cv/
