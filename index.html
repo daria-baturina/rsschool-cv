@@ -12,9 +12,26 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;400;500;700&family=Montserrat:wght@200;400;500;700&display=swap"
           rel="stylesheet">
+    <link rel="stylesheet"
+          href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.2.0/highlight.min.js"></script>
+    <link rel="stylesheet" href="/path/to/styles/default.css">
+    <script src="/path/to/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
 </head>
 <body>
+<header class="header">
+    <nav class="page-header-nav">
+        <ul class="site-navigation">
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#workexperience">work experience</a></li>
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#education">education</a></li>
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#aditionaleducation">additional education</a></li>
+            <li class="site-navigation__item"><a class="site-navigation__link" href="#codesamples">code samples</a></li>
+        </ul>
+    </nav>
+</header>
 <main>
     <section class="info">
         <img src="pictures/photo.jpg" alt="photo" class="contacts__myfoto smallfoto">
@@ -30,7 +47,7 @@
         </article>
         <article class="info-experience">
             <div class="info-experience-title title-wrapper">
-                <h2 class="titles">WORK EXPERIENCE</h2>
+                <h2 id="workexperience" class="titles">WORK EXPERIENCE</h2>
             </div>
             <div class="info-experience-text blockborder">
                 <div class="info-experience-text-job">
@@ -59,7 +76,7 @@
         </article>
         <article class="info-education">
             <div class="info-education-title title-wrapper"><span class="icon-books"></span>
-                <h2 class="titles">EDUCATION</h2></div>
+                <h2 id="education" class="titles">EDUCATION</h2></div>
             <div class="info-education-text blockborder">
                 <div class="info-education-text__years">2011-2016</div>
                 <div class="info-education-text--description">
@@ -70,18 +87,50 @@
         </article>
         <article class="info-additionally">
             <div class="info-additionally-title title-wrapper">
-                <h2 class="titles">ADDITIONAL EDUCATION</h2></div>
-            <div class="info-additionally-text blockborder">
-                <div class="info-additionally-text__years">2021</div>
-                <div class="info-additionally-text--description">
-                    <h4 class="info-additionally-text-description__company">TeachMeSkills</h4>
-                    <p class="info-additionally-text--description__position">front-end developer</p>
+                <h2 id="aditionaleducation" class="titles">ADDITIONAL EDUCATION</h2></div>
+            <div class="blockborder">
+                <div class="info-additionally-text">
+                    <div class="info-additionally-text__years">2021-now</div>
+                    <div class="info-additionally-text--description">
+                        <h4 class="info-additionally-text-description__company">Rolling Scopes School</h4>
+                        <p class="info-additionally-text--description__position">Javascript/Front-End Program</p>
+                    </div>
                 </div>
+                <div class="info-additionally-text">
+                    <div class="info-additionally-text__years">2021-2021</div>
+                    <div class="info-additionally-text--description">
+                        <h4 class="info-additionally-text-description__company">TeachMeSkills</h4>
+                        <p class="info-additionally-text--description__position">front-end developer</p>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <article class="info-education">
+            <div class="info-education-title title-wrapper">
+                <h2 id="codesamples" class="titles">CODE SAMPLES</h2></div>
+            <div class="blockborder">
+                <pre class="code">
+                    <code class="language-javascript hljs">
+function createDreamTeam(members) {
+  if (Array.isArray(members)) {
+    let result = [];
+    members.forEach((name) => {
+      if (typeof(name) === "string") {
+        let firstLetter = name.trim().split('')[0];
+        result.push(firstLetter.toUpperCase());
+      }
+    })
+    return result.sort().join('');
+  }
+  return false;
+}
+                    </code>
+                </pre>
             </div>
         </article>
     </section>
     <aside class="contacts">
-        <div class="contacts__img"><img src="pictures/photo.jpg" alt="photo" class="contacts__myfoto"></div>
+        <header class="contacts__img"><img src="pictures/photo.jpg" alt="photo" class="contacts__myfoto"></header>
         <div class="contacts-contact">
             <h2 class="contacts-contact__title title">CONTACTS</h2>
             <ul>
@@ -101,11 +150,6 @@
                     </div>
                 </li>
             </ul>
-        </div>
-        <div class="contacts-samples">
-            <h2 class="contacts-samples__title title">CODE SAMPLES</h2>
-            <div class="contacts-samples__link"><a href="https://github.com/daria-baturina" class="contacts-samples__gitlink">GitHub</a>
-            </div>
         </div>
         <div class="contacts-languages">
             <h2 class="contacts-languages__title title">LANGUAGES</h2>
